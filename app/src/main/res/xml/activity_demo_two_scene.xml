@@ -32,8 +32,17 @@
                motion:motionTarget="@+id/nameView"
                motion:framePosition="100"
                android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/backgroundView"
+               motion:framePosition="0"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/backgroundView"
+               motion:framePosition="100"
+               android:alpha="1" />
        </KeyFrameSet>
-        <OnSwipe motion:touchAnchorId="@+id/linearLayoutCompat2" />
+        <OnSwipe motion:touchAnchorId="@+id/linearLayoutCompat2"
+                 motion:touchAnchorSide="top" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -43,12 +52,26 @@
         <Constraint
             android:id="@+id/nameView"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0dp"
             motion:layout_constraintTop_toBottomOf="@+id/headerViewGrayBack" />
         <Constraint
             android:id="@+id/nameView"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             motion:layout_constraintTop_toBottomOf="@+id/headerViewGrayBack" />
+        <Constraint
+            android:id="@+id/constraintLayout4"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/constraintLayout4"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
     </ConstraintSet>
 </MotionScene>
